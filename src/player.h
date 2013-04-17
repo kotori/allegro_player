@@ -47,6 +47,8 @@ struct _Player
 // Player's function declarations
 
 bool al_player_check_collision( Mob *player, Mob *target );
+void al_player_draw( Mob *player );
+void al_player_move( Mob *player, Direction dir );
 
 //
 // Getters

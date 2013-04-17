@@ -11,6 +11,37 @@ bool al_player_check_collision( Mob *player, Mob *target )
 	return true;
 }
 
+void al_player_draw( Mob *player )
+{
+	int srcX = 0;
+	int srcY = 0;
+	al_draw_bitmap_region( player->image, srcX, srcY * al_get_bitmap_height(player->image) / 4,
+		32, 32, player->location.x, player->location.y, NULL );
+}
+
+void al_player_move( Mob *player, Direction dir )
+{
+	int direction = dir;
+	switch( direction )
+	{
+		case DIR_SOUTH:
+			player->location.y += player->speed;
+			player->direction = DIR_SOUTH;
+			break;
+		case DIR_NORTH:
+			player->location.y -= player->speed;
+			player->direction = DIR_NORTH;
+			break;
+		case DIR_EAST:
+			player->location.x += player->speed;
+			player->direction = DIR_EAST;
+			break;
+		case DIR_WEST:
+			player->location.x -= player->speed;
+			player->direction = DIR_WEST;
+			break;
+	}
+}
 
 //
 // Getters
