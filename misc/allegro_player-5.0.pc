@@ -1,0 +1,10 @@
+libdir=@LIBDIR@
+includedir=@INCDIR@
+version=5.0.7
+soversion=5.0
+
+Name: allegro_player
+Description: Allegro game programming library, player class addon
+Version: ${version}
+Libs: -L${libdir} -lallegro_player
+Cflags: -I${includedir}
