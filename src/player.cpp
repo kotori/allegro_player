@@ -43,6 +43,14 @@ void al_player_move( Mob *player, Direction dir )
 	}
 }
 
+void al_player_free( Mob *player )
+{
+	if( player->image )
+	{
+		al_destroy_bitmap( player->image );
+	}
+}
+
 //
 // Getters
 //

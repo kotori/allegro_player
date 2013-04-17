@@ -50,6 +50,8 @@ void al_player_draw( Mob *player );
 
 void al_player_move( Mob *player, Direction dir );
 
+void al_player_free( Mob *player );
+
 //
 // Getters
 //
