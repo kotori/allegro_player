@@ -15,6 +15,11 @@
  * For more information, visit http://www.gnu.org/copyleft
  */
 
+/**
+ * \file allegro_player.h
+ * \brief Header file for the allegro_player library.
+ */
+
 #ifndef ALLEGRO_ALLEGRO_H
 #define ALLEGRO_ALLEGRO_H
 
@@ -24,6 +29,10 @@ extern "C" {
 
 #include <allegro5/allegro.h>
 
+/**
+ * \enum Direction
+ * \brief Enumeration of the possible directions we can face in.
+ */
 enum Direction
 {
 	DIR_NORTH	= 0,

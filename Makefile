@@ -21,6 +21,7 @@ endif
 HEADER	= "allegro5/allegro_player.h"
 PCFILE	= "allegro_player-5.0.pc"
 TMPDIR = $(PREFIX)
+DOCS = docs
 
 all: $(TARGET)
 
@@ -57,6 +58,7 @@ uninstall:
 clean:
 	@echo "  Cleaning...";
 	$(RM) -r build/ $(TARGET)
+	$(RM) -r docs/
 
 -include $(DEPS)
 
