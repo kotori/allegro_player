@@ -45,8 +45,19 @@ enum Direction
 	DIR_WEST	= 7
 };
 
+/**
+ * \typedef _Point
+ * \brief Structure representing two points (x/y).
+ */
 typedef struct _Point	Point;
+
+/**
+ * \typedef _Point
+ * \brief Structure representing two sets of points (top-left x/y & bottom-right x/y).
+ */
 typedef struct _Rect	Rect;
+
+
 typedef struct _Player	Mob;
 
 //
