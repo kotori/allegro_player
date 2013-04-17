@@ -34,6 +34,7 @@ struct _Player
         int livesLeft;	// Player's current health.
 	int speed;	// Player's movement speed.
 	bool visible;	// Is this player visible on the screen?
+	bool active;	// Is this player moving?
 
 	enum Direction direction;	// Direction this player is facing.
 
@@ -70,6 +71,7 @@ int al_get_player_speed( Mob *player );
 int al_get_player_attack( Mob *player );
 int al_get_player_defense( Mob *player );
 bool al_get_player_visibility( Mob *player );
+bool al_get_player_active( Mob *player );
 Point al_get_player_position( Mob *player );
 Point al_get_player_prev_position( Mob *player );
 ALLEGRO_BITMAP *al_get_player_image( Mob *player );
@@ -90,6 +92,7 @@ void al_set_player_speed( Mob *player, int moveSpeed );
 void al_set_player_attack( Mob *player, int atk );
 void al_set_player_defense( Mob *player, int def );
 void al_set_player_visibility( Mob *player, bool isVisible );
+void al_set_player_active( Mob *player, bool isActive );
 void al_set_player_position( Mob *player, Point pos );
 void al_set_player_prev_position( Mob *player, Point pos );
 void al_set_player_image( Mob *player, ALLEGRO_BITMAP *img );

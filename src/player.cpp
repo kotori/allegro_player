@@ -16,9 +16,10 @@ bool al_player_check_collision( Mob *player, Mob *target )
 
 void al_player_draw( Mob *player )
 {
-	int srcX = 0;
-	int srcY = 0;
-	al_draw_bitmap_region( player->image, srcX, srcY * al_get_bitmap_height(player->image) / 4,
+	player->animationIndexX = 32;
+	player->animationIndexY = 0;
+	// Draw the region inside the animation index to the player's current position on the screen.
+	al_draw_bitmap_region( player->image, player->animationIndexX, player->animationIndexY * al_get_bitmap_height( player->image ) / 4,
 		32, 32, player->location.x, player->location.y, NULL );
 }
 
@@ -102,6 +103,11 @@ bool al_get_player_visibility( Mob *player )
 	return player->visible;
 }
 
+bool al_get_player_active( Mob *player )
+{
+	return player->active;
+}
+
 Point al_get_player_position( Mob *player )
 {
 	return player->location;
@@ -175,6 +181,10 @@ void al_set_player_defense( Mob *player, int def )
         player->attrDefense = def;
 }
 
+void al_set_player_active( Mob *player, bool isActive )
+{
+        player->active = isActive;
+}
 
 void al_set_player_visibility( Mob *player, bool isVisible )
 {
