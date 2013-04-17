@@ -45,6 +45,16 @@ int al_get_player_speed( Mob *player )
 	return player->speed;
 }
 
+int al_get_player_attack( Mob *player )
+{
+        return player->attrAttack;
+}
+
+int al_get_player_defense( Mob *player )
+{
+        return player->attrDefense;
+}
+
 bool al_get_player_visibility( Mob *player )
 {
 	return player->visible;
@@ -102,6 +112,17 @@ void al_set_player_speed( Mob *player, int moveSpeed )
 {
 	player->speed = moveSpeed;
 }
+
+void al_set_player_attack( Mob *player, int atk )
+{
+        player->attrAttack = atk;
+}
+
+void al_set_player_defense( Mob *player, int def )
+{
+        player->attrDefense = def;
+}
+
 
 void al_set_player_visibility( Mob *player, bool isVisible )
 {

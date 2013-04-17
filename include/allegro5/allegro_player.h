@@ -47,7 +47,7 @@ typedef struct _Player	Mob;
 bool al_player_check_collision( Mob *player, Mob *target );
 
 //
-// Attribute Getters
+// Getters
 //
 int al_get_player_id( Mob *player );
 int al_get_player_width( Mob *player );
@@ -55,6 +55,8 @@ int al_get_player_height( Mob *player );
 int al_get_player_level( Mob *player );
 int al_get_player_lives( Mob *player );
 int al_get_player_speed( Mob *player );
+int al_get_player_attack( Mob *player );
+int al_get_player_defense( Mob *player );
 bool al_get_player_visibility( Mob *player );
 Point al_get_player_position( Mob *player );
 Point al_get_player_prev_position( Mob *player );
@@ -62,7 +64,7 @@ ALLEGRO_BITMAP *al_get_player_image( Mob *player );
 Direction al_get_player_direction( Mob *player );
 
 //
-// Attribute Setters
+// Setters
 //
 void al_set_player_id( Mob *player, int ident );
 void al_set_player_width( Mob *player, int w );
@@ -70,6 +72,8 @@ void al_set_player_height( Mob *player, int h );
 void al_set_player_level( Mob *player, int level );
 void al_set_player_lives( Mob *player, int life );
 void al_set_player_speed( Mob *player, int moveSpeed );
+void al_set_player_attack( Mob *player, int atk );
+void al_set_player_defense( Mob *player, int def );
 void al_set_player_visibility( Mob *player, bool isVisible );
 void al_set_player_position( Mob *player, Point pos );
 void al_set_player_prev_position( Mob *player, Point pos );
