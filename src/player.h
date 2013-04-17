@@ -1,3 +1,6 @@
+/**
+ * \file player.h
+ */
 #ifndef PLAYER_INC_H
 #define PLAYER_INC_H
 
