@@ -122,6 +122,16 @@ Direction al_get_player_direction( Mob *player )
 	return player->direction;
 }
 
+int al_get_player_anim_x( Mob *player )
+{
+	return player->animationIndexX;
+}
+
+int al_get_player_anim_y( Mob *player );
+{
+	return player->animationIndexY;
+}
+
 //
 // Setters
 //
@@ -190,3 +200,14 @@ void al_set_player_direction( Mob *player, Direction dir )
 {
 	player->direction = dir;
 }
+
+void al_set_player_anim_x( Mob *player, int sourceX )
+{
+        player->animationIndexX = sourceX;
+}
+
+void al_set_player_anim_y( Mob *player, int sourceY );
+{
+        player->animationIndexY = sourceY;
+}
+
