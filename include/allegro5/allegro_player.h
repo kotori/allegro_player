@@ -88,6 +88,9 @@ Point al_get_player_position( Mob *player );
 Point al_get_player_prev_position( Mob *player );
 ALLEGRO_BITMAP *al_get_player_image( Mob *player );
 Direction al_get_player_direction( Mob *player );
+int al_get_player_anim_x( Mob *player );
+int al_get_player_anim_y( Mob *player );
+
 
 //
 // Setters
@@ -105,7 +108,8 @@ void al_set_player_position( Mob *player, Point pos );
 void al_set_player_prev_position( Mob *player, Point pos );
 void al_set_player_image( Mob *player, ALLEGRO_BITMAP *img );
 void al_set_player_direction( Mob *player, Direction dir );
-
+void al_set_player_anim_x( Mob *player, int sourceX );
+void al_set_player_anim_y( Mob *player, int sourceY );
 
 
 #ifdef __cplusplus
