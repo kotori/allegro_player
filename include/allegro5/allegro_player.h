@@ -65,7 +65,6 @@ typedef struct _Player	Mob;
 //
 
 bool al_player_check_collision( Mob *player, Mob *target );
-bool al_player_check_collision( Mob *player, int targetX, int targetY );
 
 void al_player_draw( Mob *player );
 
