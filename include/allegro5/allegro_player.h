@@ -35,14 +35,14 @@ extern "C" {
  */
 enum Direction
 {
-	DIR_NORTH	= 0,
-	DIR_NORTH_EAST	= 1,
-	DIR_NORTH_WEST	= 2,
-	DIR_EAST	= 3,
-	DIR_SOUTH_EAST	= 4,
-	DIR_SOUTH_WEST	= 5,
-	DIR_SOUTH	= 6,
-	DIR_WEST	= 7
+	DIR_SOUTH = 0,
+	DIR_WEST = 1,
+	DIR_EAST = 2,
+	DIR_NORTH = 3,
+	DIR_NORTH_EAST	= 4,
+	DIR_NORTH_WEST	= 5,
+	DIR_SOUTH_EAST	= 6,
+	DIR_SOUTH_WEST	= 7,
 };
 
 /**
