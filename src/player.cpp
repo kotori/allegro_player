@@ -14,6 +14,16 @@ bool al_player_check_collision( Mob *player, Mob *target )
 	return true;
 }
 
+bool al_player_check_collision( Mob *player, int targetX, int targetY )
+{
+	if( player->location.x < targetX || player->location.x < targetX + player->width ||
+                player->location.y + player->height < targetY || player->location.y > targetY + player->height )
+        {
+                return false;
+        }
+	return true;
+}
+
 void al_player_draw( Mob *player )
 {
 	// Draw the region inside the animation index to the player's current position on the screen.
