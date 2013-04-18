@@ -43,7 +43,7 @@ install: all
 	@echo " Includes..."
 	@install -D -m 0644 "include/$(HEADER)" "$(DESTDIR)$(INCDIR)/$(HEADER)"
 
-	@echo " Moving allegro_tiled-5.0.pc into $(DESTDIR)$(TMPDIR)"
+	@echo " Moving allegro_player-5.0.pc into $(DESTDIR)$(TMPDIR)"
 
 	@cat "misc/$(PCFILE)" | sed 's#@LIBDIR@#$(LIBDIR)#g' | sed 's#@INCDIR@#$(INCDIR)#g' > "$(DESTDIR)$(TMPDIR)/$(PCFILE)"
 	@install -D -m 0644 "$(DESTDIR)$(TMPDIR)/$(PCFILE)" "$(DESTDIR)$(LIBDIR)/pkgconfig/$(PCFILE)"
