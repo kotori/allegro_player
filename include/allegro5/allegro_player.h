@@ -35,33 +35,32 @@ extern "C" {
  */
 enum Direction
 {
-	DIR_SOUTH = 0,
-	DIR_WEST = 1,
-	DIR_EAST = 2,
-	DIR_NORTH = 3,
-	DIR_NORTH_EAST	= 4,
-	DIR_NORTH_WEST	= 5,
-	DIR_SOUTH_EAST	= 6,
-	DIR_SOUTH_WEST	= 7,
+	DIR_SOUTH = 0, /*!< Facing South. Down. */
+	DIR_WEST = 1, /*!< Facing West. Left. */
+	DIR_EAST = 2, /*!< Facing East. Right. */
+	DIR_NORTH = 3, /*!< Facing North. Up. */
+	DIR_SOUTH_WEST  = 4, /*!< Facing South-West. */
+	DIR_SOUTH_EAST  = 5, /*!< Facing South-East. */
+	DIR_NORTH_WEST  = 6, /*!< Facing North-West. */
+	DIR_NORTH_EAST  = 7, /*!< Facing North-East. */
 };
 
 /**
- * \typedef _Point
+ * \typedef Point
  * \brief Structure representing two points (x/y).
  */
 typedef struct _Point	Point;
 
 /**
- * \typedef _Point
+ * \typedef Rect
  * \brief Structure representing two sets of points (top-left x/y & bottom-right x/y).
  */
 typedef struct _Rect	Rect;
 
 /**
- * \typedef _Player
+ * \typedef Mob
  * \brief Structure representing a player, and all the associated attributes.
  */
-
 typedef struct _Player	Mob;
 
 /**
@@ -73,14 +72,30 @@ typedef struct _Player	Mob;
  */
 bool al_player_check_collision( Mob *player, Mob *target );
 
+/**
+ * \fn void al_player_draw( Mob *player )
+ * \brief Draw the player's bitmap image to the screen.
+ * \param player Player structure pointer.
+ */
 void al_player_draw( Mob *player );
 
+/**
+ * \fn void al_player_move( Mob *player, Direction dir )
+ * \brief Update the player's x, y location, and direction facing.
+ * \param player Player structure pointer.
+ * \param dir Direction this player is facing.
+ */
 void al_player_move( Mob *player, Direction dir );
 
+/**
+ * \fn void al_player_free( Mob *player )
+ * \brief Free the player's resources from memory.
+ * \param player Player structure pointer.
+ */
 void al_player_free( Mob *player );
 
 //
-// Getters
+// Attribute Getters
 //
 int al_get_player_id( Mob *player );
 int al_get_player_width( Mob *player );
@@ -96,12 +111,13 @@ Point al_get_player_position( Mob *player );
 Point al_get_player_prev_position( Mob *player );
 ALLEGRO_BITMAP *al_get_player_image( Mob *player );
 Direction al_get_player_direction( Mob *player );
+Direction al_get_player_prev_direction( Mob *player );
 int al_get_player_anim_x( Mob *player );
 int al_get_player_anim_y( Mob *player );
 
 
 //
-// Setters
+// Attribute Setters
 //
 void al_set_player_id( Mob *player, int ident );
 void al_set_player_width( Mob *player, int w );
@@ -117,6 +133,7 @@ void al_set_player_position( Mob *player, Point pos );
 void al_set_player_prev_position( Mob *player, Point pos );
 void al_set_player_image( Mob *player, ALLEGRO_BITMAP *img );
 void al_set_player_direction( Mob *player, Direction dir );
+void al_set_player_prev_direction( Mob *player, Direction dir );
 void al_set_player_anim_x( Mob *player, int sourceX );
 void al_set_player_anim_y( Mob *player, int sourceY );
 

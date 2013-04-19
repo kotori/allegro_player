@@ -15,10 +15,6 @@
  * For more information, visit http://www.gnu.org/copyleft
  */
 
-/**
- * \file player.cpp
- */
-
 #include "player.h"
 
 bool al_player_check_collision( Mob *player, Mob *target )
@@ -143,6 +139,11 @@ Direction al_get_player_direction( Mob *player )
 	return player->direction;
 }
 
+Direction al_get_player_prev_direction( Mob *player )
+{
+	return player->prevDirection;
+}
+
 int al_get_player_anim_x( Mob *player )
 {
 	return player->animationIndexX;
@@ -224,6 +225,11 @@ void al_set_player_image( Mob *player, ALLEGRO_BITMAP *img )
 void al_set_player_direction( Mob *player, Direction dir )
 {
 	player->direction = dir;
+}
+
+void al_set_player_prev_direction( Mob *player, Direction dir )
+{
+        player->prevDirection = dir;
 }
 
 void al_set_player_anim_x( Mob *player, int sourceX )
