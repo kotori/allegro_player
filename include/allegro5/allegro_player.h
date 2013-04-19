@@ -57,13 +57,20 @@ typedef struct _Point	Point;
  */
 typedef struct _Rect	Rect;
 
+/**
+ * \typedef _Player
+ * \brief Structure representing a player, and all the associated attributes.
+ */
 
 typedef struct _Player	Mob;
 
-//
-// Helper functions
-//
-
+/**
+ * \fn bool al_player_check_collision( Mob *player, Mob *target )
+ * \brief Check for a collision between this Player and another
+ * \param player Player structure pointer.
+ * \param target Playe target structure pointer.
+ * \returns True if a collision will occur. False if no collision.
+ */
 bool al_player_check_collision( Mob *player, Mob *target );
 
 void al_player_draw( Mob *player );
